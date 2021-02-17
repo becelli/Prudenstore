@@ -1,0 +1,180 @@
+[
+	[
+		{
+			"id": 1,
+			"name": "1984 - George Orwell",
+			"category": "Livros",
+			"price": 27.79,
+			"image": "./assets/1984.webp"
+		},
+		{
+			"id": 2,
+			"name": "Camiseta Skull",
+			"category": "Camisetas",
+			"price": 39.9,
+			"image": "./assets/caveira.webp"
+		},
+		{
+			"id": 3,
+			"name": "Camiseta Death Metal",
+			"category": "Camisetas",
+			"price": 49.9,
+			"image": "./assets/deathmetal.webp"
+		},
+		{
+			"id": 4,
+			"name": "Camiseta DragonMoon",
+			"category": "Camisetas",
+			"price": 39.9,
+			"image": "./assets/dragonmoon.webp"
+		},
+		{
+			"id": 5,
+			"name": "Camiseta Super Saya-Gym",
+			"category": "Camisetas",
+			"price": 49.9,
+			"image": "./assets/gym.webp"
+		},
+		{
+			"id": 6,
+			"name": "Medo - LoveCraft",
+			"category": "Livros",
+			"price": 34.9,
+			"image": "./assets/cosmic.jpg"
+		},
+		{
+			"id": 7,
+			"name": "Placa Gringotts",
+			"category": "Decoração",
+			"price": 18.9,
+			"image": "./assets/placa.webp"
+		},
+		{
+			"id": 8,
+			"name": "Camiseta Seu Madruga",
+			"category": "Camisetas",
+			"price": 39.9,
+			"image": "./assets/seumadruga.jpg"
+		},
+		{
+			"id": 9,
+			"name": "Boneco Star Wars",
+			"category": "Decoração",
+			"price": 89.79,
+			"image": "./assets/starwars.webp"
+		},
+		{
+			"id": 10,
+			"name": "Camiseta A Força",
+			"category": "Camisetas",
+			"price": 59.9,
+			"image": "./assets/aforca.jpg"
+		},
+		{
+			"id": 11,
+			"name": "Almofada Annie",
+			"category": "Decoração",
+			"price": 35.9,
+			"image": "./assets/almofada-annie.jpg"
+		},
+		{
+			"id": 12,
+			"name": "Confissões do Crematório - Caitlin Doughty",
+			"category": "Livros",
+			"price": 89.79,
+			"image": "./assets/confissoescrematorio.jpg"
+		},
+		{
+			"id": 13,
+			"name": "Caneca Batman",
+			"category": "Canecas",
+			"price": 27.9,
+			"image": "./assets/caneca-batman.jpg"
+		},
+		{
+			"id": 14,
+			"name": "Almofada Braum",
+			"category": "Decoração",
+			"price": 35.9,
+			"image": "./assets/almofada-braum.jpg"
+		},
+		{
+			"id": 15,
+			"name": "Almofada Caitlyn",
+			"category": "Decoração",
+			"price": 35.9,
+			"image": "./assets/almofada-caitlyn.jpg"
+		},
+		{
+			"id": 16,
+			"name": "Dracula - Bram Stoker",
+			"category": "Livros",
+			"price": 45.39,
+			"image": "./assets/dracula.jpg"
+		},
+		{
+			"id": 17,
+			"name": "Copo Coringa",
+			"category": "Canecas",
+			"price": 34.49,
+			"image": "./assets/copo-coringa.webp"
+		},
+		{
+			"id": 18,
+			"name": "Camiseta Pentakill",
+			"category": "Camisetas",
+			"price": 34.9,
+			"image": "./assets/pentakill-lol.jpg"
+		},
+		{
+			"id": 19,
+			"name": "Luminária Pacman",
+			"category": "Decoração",
+			"price": 379.9,
+			"image": "./assets/luminariapacman.webp"
+		},
+		{
+			"id": 20,
+			"name": "Trilogia O Senhor dos Anéis - J.R.R. Tolkien",
+			"category": "Livros",
+			"price": 69.9,
+			"image": "./assets/trilogia-aneis.jpg"
+		},
+		{
+			"id": 21,
+			"name": "Caneca Marvel",
+			"category": "Canecas",
+			"price": 22.9,
+			"image": "./assets/canecamarvel.jpg"
+		},
+		{
+			"id": 21,
+			"name": "Camiseta Pacman",
+			"category": "Camisetas",
+			"price": 89.79,
+			"image": "./assets/pacman.jpg"
+		},
+		{
+			"id": 22,
+			"name": "Caneca S.H.I.E.L.D.",
+			"category": "Canecas",
+			"price": 34.49,
+			"image": "./assets/caneca-shield.jpg"
+		},
+		{
+			"id": 23,
+			"name": "Golem e o Gênio - Helene Wecker",
+			"category": "Livros",
+			"price": 47.9,
+			"image": "./assets/golemeogenio.jpg"
+		},
+		{
+			"id": 24,
+			"name": "Caneca Itachi - Ódio",
+			"category": "Canecas",
+			"price": 34.49,
+			"image": "./assets/itachi.png"
+		}
+	],
+	["Camisetas", "Decoração", "Livros", "Canecas"]
+]

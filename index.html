@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/global.css" />
+		<link rel="stylesheet" href="css/index.css" />
+		<title>Prudenstore</title>
+	</head>
+	<body>
+		<header>
+			<img id="main-logo" src="./assets/logo.svg" onclick="window.location.href = `#`" />
+			<section id="cart">
+				<h4>Itens no carrinho: <span id="cart-items">0</span></h4>
+				<a href="./cart.html"
+					><button id="buy-button" disabled="disabled" onclick="CloseCart()">
+						Finalizar Compra
+					</button></a
+				>
+			</section>
+		</header>
+		<div id="page">
+			<sidebar></sidebar>
+		</div>
+	</body>
+	<script src="js/index.js"></script>
+</html>

@@ -1,0 +1,65 @@
+main {
+	padding-left: 6vw;
+	padding-right: 6vw;
+	padding-top: 100px;
+}
+
+.title {
+	text-align: center;
+	font-size: 2rem;
+	font-weight: 700;
+	margin: 10px auto;
+}
+.sub-title {
+	text-align: center;
+	font-size: 1.5rem;
+	font-weight: 500;
+	margin: 10px auto;
+}
+
+header {
+	position: fixed;
+	width: 100%;
+	padding-bottom: 8px;
+	background-color: rgba(255, 255, 255, 0.96);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+header img {
+	width: 400px;
+	max-width: 80%;
+}
+
+.card img {
+	width: 64px;
+	object-fit: cover;
+	object-fit: cover;
+	border-radius: 100%;
+}
+.card {
+	/* padding: 0 7vw; */
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+.card * {
+	text-align: right;
+	margin: auto 1vw;
+	padding: 5px;
+	margin-right: 3vw;
+	font-size: 1.2rem;
+}
+#products section {
+	margin-bottom: 15px;
+}
+.price {
+	font-size: 1.7rem;
+	font-weight: 600;
+}
+
+.margin {
+	margin-bottom: 50px;
+}
