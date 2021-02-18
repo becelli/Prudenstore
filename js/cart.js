@@ -86,7 +86,7 @@ const listProducts = (array) => {
 const removeFromCart = (id) => {
 	cart.splice(id, 1)
 	UpdateCart()
-	if (cart == null || cart.length == 0) window.location.href = '/'
+	if (cart == null || cart.length == 0) window.location.href = './'
 	else {
 		removeShownProducts()
 		listProducts(cart)
