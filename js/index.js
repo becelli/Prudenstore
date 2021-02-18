@@ -49,6 +49,7 @@ const listProducts = (array) => {
 		image.setAttribute('src', item.image)
 		name.innerHTML = item.name
 		category.innerHTML = item.category
+		price.classList.add('price')
 		price.innerHTML = `R$ ${item.price.toFixed(2)}`
 		button.innerHTML = 'Adicionar ao Carrinho'
 
@@ -71,9 +72,7 @@ const removeShownProducts = () => {
 const addItemToCart = (id) => {
 	const button = document.querySelector('#buy-button')
 	if (cart) button.removeAttribute('disabled')
-	console.log(cart)
 	cart.push(db[0][id - 1])
-	console.log(cart)
 	const span = document.querySelector('#cart-items')
 	span.innerHTML = cart.length
 }
