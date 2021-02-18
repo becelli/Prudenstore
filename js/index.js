@@ -23,7 +23,7 @@ async function readJSON() {
 }
 
 const recoverInfo = () => {
-	const data = JSON.parse(localStorage.getItem('items'))
+	const data = JSON.parse(sessionStorage.getItem('items'))
 	if (data) {
 		cart = data
 		const button = document.querySelector('#buy-button')
@@ -79,7 +79,7 @@ const addItemToCart = (id) => {
 }
 const CloseCart = () => {
 	const dataToSend = JSON.stringify(cart)
-	localStorage.setItem('items', dataToSend)
+	sessionStorage.setItem('items', dataToSend)
 }
 // FILTERS AND ORDERS
 const listAllCategories = () => {

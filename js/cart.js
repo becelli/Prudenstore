@@ -81,10 +81,10 @@ const removeShownProducts = () => {
 
 const UpdateCart = () => {
 	const dataToSend = JSON.stringify(cart)
-	localStorage.setItem('items', dataToSend)
+	sessionStorage.setItem('items', dataToSend)
 }
 const recoverInfo = () => {
-	cart = JSON.parse(localStorage.getItem('items'))
+	cart = JSON.parse(sessionStorage.getItem('items'))
 	listProducts(cart)
 }
 
