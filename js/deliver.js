@@ -50,7 +50,10 @@ const showShipping = () => {
 }
 const recoverInfo = () => {
 	cart = JSON.parse(sessionStorage.getItem('shipping'))
-	listProducts(cart)
-	showShipping()
+	if (cart == null || cart.length == 0) window.location.href = './'
+	else {
+		listProducts(cart)
+		showShipping()
+	}
 }
 recoverInfo()

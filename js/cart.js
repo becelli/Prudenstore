@@ -28,7 +28,7 @@ const listProducts = (array) => {
 	const title = document.createElement('h1')
 	title.classList.add('title')
 	title.innerHTML = 'Resumo do Pedido'
-	page.appendChild(title)
+	main.appendChild(title)
 	main.setAttribute('id', 'products')
 	let id = 0
 	let totalPrice = 0
@@ -86,9 +86,11 @@ const listProducts = (array) => {
 const removeFromCart = (id) => {
 	cart.splice(id, 1)
 	UpdateCart()
-	removeShownProducts()
-	listProducts(cart)
-	console.log(cart)
+	if (cart == null || cart.length == 0) window.location.href = '/'
+	else {
+		removeShownProducts()
+		listProducts(cart)
+	}
 }
 const removeShownProducts = () => {
 	const main = document.querySelector('#products')
@@ -96,12 +98,16 @@ const removeShownProducts = () => {
 }
 
 const UpdateCart = () => {
-	const dataToSend = JSON.stringify(cart)
-	sessionStorage.setItem('items', dataToSend)
+	if (cart == null || cart.length == 0) sessionStorage.removeItem('items')
+	else {
+		const dataToSend = JSON.stringify(cart)
+		sessionStorage.setItem('items', dataToSend)
+	}
 }
 const recoverInfo = () => {
 	cart = JSON.parse(sessionStorage.getItem('items'))
-	listProducts(cart)
+	if (cart == null || cart.length == 0) window.location.href = './'
+	else listProducts(cart)
 }
 
 const addToShipping = () => {
