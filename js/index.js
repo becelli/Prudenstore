@@ -5,6 +5,7 @@ let cart = [],
 	lastDisplayed = []
 
 readJSON()
+// Read the json that contains all infos about the website.
 async function readJSON() {
 	await fetch('./database/data.json')
 		.then((response) => {
@@ -21,7 +22,7 @@ async function readJSON() {
 			// orderByPrice()
 		})
 }
-
+// Recover info if the user refreshes its page.
 const recoverInfo = () => {
 	const data = JSON.parse(sessionStorage.getItem('items'))
 	if (data) {
@@ -32,7 +33,7 @@ const recoverInfo = () => {
 		span.innerHTML = cart.length
 	}
 }
-// CONTROL SHOW PRODUCTS
+// Display an array (all the pŕoducts or a category) and hide all products.
 const listProducts = (array) => {
 	const main = document.createElement('main')
 	main.setAttribute('id', 'products')
@@ -68,7 +69,7 @@ const removeShownProducts = () => {
 	main.remove()
 }
 
-// ADD ITEM TO THE CART
+// Pushes to Cart Array
 const addItemToCart = (id) => {
 	const button = document.querySelector('#buy-button')
 	if (cart) button.removeAttribute('disabled')
@@ -76,11 +77,12 @@ const addItemToCart = (id) => {
 	const span = document.querySelector('#cart-items')
 	span.innerHTML = cart.length
 }
+// Insert on session storage
 const CloseCart = () => {
 	const dataToSend = JSON.stringify(cart)
 	sessionStorage.setItem('items', dataToSend)
 }
-// FILTERS AND ORDERS
+// List the options to filter and order.
 const listAllCategories = () => {
 	const section = document.querySelector('sidebar')
 	const ul = document.createElement('ul')
@@ -125,6 +127,7 @@ const listAllSorters = () => {
 	section.appendChild(ul)
 	page.appendChild(section)
 }
+// Removes all the shown produts and display the exactly category the user selected.
 const filterByCategory = (category) => {
 	let filtered = []
 	db[0].forEach((item) => {
@@ -133,7 +136,7 @@ const filterByCategory = (category) => {
 	removeShownProducts()
 	listProducts(filtered)
 }
-// Fix bad designs in mobile
+// Fixes bad designs in mobile
 const Responsivity = () => {
 	const width = window.innerWidth
 	if (width > 540) {
@@ -141,7 +144,7 @@ const Responsivity = () => {
 		flex.classList.add('flex')
 	}
 }
-
+// Sort the array of products.
 const orderByPrice = (type) => {
 	lastDisplayed.sort((a, b) => (a.price >= b.price ? 1 : -1))
 	if (type) lastDisplayed.reverse()

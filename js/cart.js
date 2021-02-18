@@ -1,7 +1,7 @@
 const body = document.querySelector('body')
 const page = document.querySelector('#cart-items')
 let cart = []
-// getInfosByCEP(16900080)
+// it uses BRASIL API to get data from each location
 async function getInfosByCEP(cep) {
 	await fetch(`https://brasilapi.com.br/api/cep/v1/${cep.toString()}`)
 		.then((response) => {
@@ -22,7 +22,7 @@ async function getInfosByCEP(cep) {
 			}
 		})
 }
-
+// list all the products in the cart
 const listProducts = (array) => {
 	const main = document.createElement('section')
 	const title = document.createElement('h1')
@@ -35,7 +35,6 @@ const listProducts = (array) => {
 	array.forEach((item) => {
 		const card = document.createElement('section')
 		const name = document.createElement('h1')
-		// const category = document.createElement('p')
 		const price = document.createElement('h1')
 		const button = document.createElement('button')
 		const image = document.createElement('img')
@@ -50,15 +49,12 @@ const listProducts = (array) => {
 		card.classList.add('card')
 		image.setAttribute('src', item.image)
 		name.innerHTML = item.name
-		// category.innerHTML = item.category
 		price.innerHTML = `R$ ${item.price.toFixed(2)}`
 		totalPrice += item.price
 		price.classList.add('price')
 		button.innerHTML = 'x'
-
 		divEsq.appendChild(image)
 		divEsq.appendChild(name)
-		// card.appendChild(category)
 		divDir.appendChild(price)
 		divDir.appendChild(button)
 		card.appendChild(divEsq)
@@ -83,6 +79,7 @@ const listProducts = (array) => {
 	page.appendChild(main)
 	lastDisplayed = array
 }
+// Remove specific item
 const removeFromCart = (id) => {
 	cart.splice(id, 1)
 	UpdateCart()
@@ -92,11 +89,12 @@ const removeFromCart = (id) => {
 		listProducts(cart)
 	}
 }
+// All displayed products
 const removeShownProducts = () => {
 	const main = document.querySelector('#products')
 	main.remove()
 }
-
+// Cart List in SessionStorage
 const UpdateCart = () => {
 	if (cart == null || cart.length == 0) sessionStorage.removeItem('items')
 	else {
@@ -104,15 +102,17 @@ const UpdateCart = () => {
 		sessionStorage.setItem('items', dataToSend)
 	}
 }
+// Recover info from sessionStorage
 const recoverInfo = () => {
 	cart = JSON.parse(sessionStorage.getItem('items'))
 	if (cart == null || cart.length == 0) window.location.href = './'
 	else listProducts(cart)
 }
-
+// Go to shipping page
 const addToShipping = () => {
 	localStorage.removeItem('items')
 	const dataToSend = JSON.stringify(cart)
 	sessionStorage.setItem('shipping', dataToSend)
 }
+
 recoverInfo()

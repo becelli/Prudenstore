@@ -3,12 +3,19 @@ button {
 	cursor: pointer;
 	border-radius: 5px 10px 5px 10px;
 }
-
+/* PAGE CONFIGS */
 #page {
 	padding: 0 10%;
+	padding-top: 100px;
 	display: block;
 }
-
+main {
+	text-align: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+/* PRODUCTS CARDS */
 .add-button {
 	background: var(--red);
 	color: white;
@@ -41,12 +48,8 @@ button {
 	max-width: 100%;
 	max-height: 300px;
 }
-main {
-	text-align: center;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-}
+
+/* FILTERS AND ORDER STYLES */
 .list-ul {
 	margin-bottom: 20px;
 	margin-right: 30px;
@@ -67,22 +70,7 @@ main {
 	text-decoration: underline;
 }
 
-#main-logo {
-	/* padding: 10px; */
-	width: 300px;
-	max-width: 70%;
-	cursor: pointer;
-}
-header {
-	position: fixed;
-	width: 100%;
-	padding-bottom: 8px;
-	background-color: rgba(255, 255, 255, 0.96);
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-}
-
+/* NAVBAR STYLES */
 #cart {
 	display: flex;
 	justify-content: space-between;
@@ -94,8 +82,20 @@ header {
 	margin-right: 10px;
 	font-weight: 400;
 }
-#page {
-	padding-top: 100px;
+#main-logo {
+	width: 300px;
+	max-width: 70%;
+	cursor: pointer;
+}
+
+header {
+	position: fixed;
+	width: 100%;
+	padding-bottom: 8px;
+	background-color: rgba(255, 255, 255, 0.96);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
 }
 
 #buy-button {

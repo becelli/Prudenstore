@@ -81,7 +81,7 @@
 			"id": 12,
 			"name": "Confissões do Crematório - Caitlin Doughty",
 			"category": "Livros",
-			"price": 89.79,
+			"price": 34.9,
 			"image": "./assets/confissoescrematorio.jpg"
 		},
 		{
@@ -151,7 +151,7 @@
 			"id": 21,
 			"name": "Camiseta Pacman",
 			"category": "Camisetas",
-			"price": 89.79,
+			"price": 39.9,
 			"image": "./assets/pacman.jpg"
 		},
 		{

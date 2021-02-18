@@ -2,6 +2,8 @@ const body = document.querySelector('body')
 const page = document.querySelector('#page')
 const shipping = document.querySelector('#shipping')
 let id = 0
+
+//  List the bought products
 const listProducts = (array) => {
 	const main = document.createElement('section')
 	const title = document.createElement('h1')
@@ -25,6 +27,7 @@ const listProducts = (array) => {
 	page.appendChild(main)
 	lastDisplayed = array
 }
+// Display the shipping time and a message
 const showShipping = () => {
 	const div = document.createElement('div')
 	div.classList.add('margin')
@@ -48,6 +51,8 @@ const showShipping = () => {
 
 	shipping.appendChild(div)
 }
+
+// Get info by sessionStorage
 const recoverInfo = () => {
 	cart = JSON.parse(sessionStorage.getItem('shipping'))
 	if (cart == null || cart.length == 0) window.location.href = './'

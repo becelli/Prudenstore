@@ -1,9 +1,10 @@
+/* PAGE SETTINGS */
 main {
 	padding-left: 6vw;
 	padding-right: 6vw;
 	padding-top: 100px;
 }
-
+/* PRE-DETERMINED SIZES */
 .title {
 	text-align: center;
 	font-size: 2rem;
@@ -16,22 +17,7 @@ main {
 	font-weight: 500;
 	margin: 10px auto;
 }
-
-header {
-	position: fixed;
-	width: 100%;
-	padding-bottom: 8px;
-	background-color: rgba(255, 255, 255, 0.96);
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-}
-
-header img {
-	width: 400px;
-	max-width: 80%;
-}
-
+/* PRODUCTS STYLES */
 .card img {
 	width: 64px;
 	object-fit: cover;
@@ -39,7 +25,6 @@ header img {
 	border-radius: 100%;
 }
 .card {
-	/* padding: 0 7vw; */
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
@@ -55,11 +40,24 @@ header img {
 #products section {
 	margin-bottom: 15px;
 }
-.price {
-	font-size: 1.7rem;
-	font-weight: 600;
-}
 
 .margin {
 	margin-bottom: 50px;
+}
+
+/* NAVBAR STYLES*/
+
+header {
+	position: fixed;
+	width: 100%;
+	padding-bottom: 8px;
+	background-color: rgba(255, 255, 255, 0.96);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+header img {
+	width: 400px;
+	max-width: 80%;
 }
