@@ -48,7 +48,16 @@ main {
 	font-weight: 700;
 	margin: 16px 0;
 }
-
+.price-title {
+	font-size: 1.6rem;
+	text-align: center;
+	font-weight: 600;
+}
+.total {
+	font-weight: 300 !important;
+	text-align: center;
+	margin-bottom: 80px;
+}
 #submit {
 	background-color: var(--green);
 	box-shadow: none !important;

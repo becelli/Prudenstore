@@ -31,6 +31,7 @@ const listProducts = (array) => {
 	page.appendChild(title)
 	main.setAttribute('id', 'products')
 	let id = 0
+	let totalPrice = 0
 	array.forEach((item) => {
 		const card = document.createElement('section')
 		const name = document.createElement('h1')
@@ -51,6 +52,7 @@ const listProducts = (array) => {
 		name.innerHTML = item.name
 		// category.innerHTML = item.category
 		price.innerHTML = `R$ ${item.price.toFixed(2)}`
+		totalPrice += item.price
 		price.classList.add('price')
 		button.innerHTML = 'x'
 
@@ -64,6 +66,20 @@ const listProducts = (array) => {
 		main.appendChild(card)
 		id++
 	})
+	const card = document.createElement('section')
+	const name = document.createElement('h1')
+	const price = document.createElement('h1')
+	// card.classList.add('card')
+	name.innerHTML = 'Preço total do carrinho'
+	name.classList.add('price-title')
+	price.innerHTML = `R$ ${totalPrice.toFixed(2)}`
+	price.classList.add('price')
+	price.classList.add('total')
+
+	card.appendChild(name)
+	// card.appendChild(category)
+	card.appendChild(price)
+	main.appendChild(card)
 	page.appendChild(main)
 	lastDisplayed = array
 }
